@@ -1,4 +1,4 @@
-setwd("../pubmed-affiliates/")
+# Run after run.py
 
 library(tidyverse)
 

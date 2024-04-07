@@ -1,3 +1,7 @@
+# Run first.
+# usage is
+# > python3 run.py
+
 from xml.etree import ElementTree as ET
 import requests
 import json
@@ -5,10 +9,20 @@ import csv
 import time
 
 def get_all_IDs():
+    '''
+    Replace the block below with what you are searching for
+    term is how it would look on PubMED
+    db is the database
+    rt is the format the search will be returned in
+    retmax is how many searches to return. I knew ahead of time how many I was looking for
+    '''
+    # *******************************************
     term = "Wellenius[Author-Last]+G[Author-First]"
     db = 'pubmed'
     rt = "json"
     retmax = 300
+    # *******************************************
+
     url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db="+ db + \
         "&term=" + term + "&retmode=" + rt + "&bdata=<citations>&retmax=" + str(retmax)
 
